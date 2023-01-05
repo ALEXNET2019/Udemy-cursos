@@ -1,0 +1,29 @@
+<?php
+namespace A;
+
+class Produto implements CadastroInterface
+{
+    public $nome = 'Notebook';
+
+    public function __construct()
+    {
+        echo '<pre>';
+        print_r(get_class_methods($this));
+        echo '</pre>';
+    }
+
+    public function __get($attr)
+    {
+        return $this->$attr;
+    }
+
+    public function salvar()
+    {
+        echo 'Salvar';
+    }
+}
+
+interface CadastroInterface
+{
+    public function salvar();
+}
