@@ -1,4 +1,5 @@
 <?php
+
 namespace A;
 
 class Produto implements CadastroInterface
